@@ -1,0 +1,767 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>Pinball</name>
+    <description>Retro pinball game</description>
+    <version>1.0.0.0</version>
+    <author>MG GAmes</author>
+    <author-email>mggames0@hotmail.com</author-email>
+    <author-website>mg-games.itch.io</author-website>
+    <app-id>com.mggames.pinball</app-id>
+    <unique-id>268ucoe0z65yv</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="Touch" version="1">Touch</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>640</width>
+        <height>960</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">Yes</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="AKMT">
+            <object-type name="Audio" sid="8165104511942979">
+                <plugin id="Audio" />
+            </object-type>
+            <object-type name="Keyboard" sid="2256628556711924">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="Mouse" sid="8626343390061717">
+                <plugin id="Mouse" />
+            </object-type>
+            <object-type name="Touch" sid="5078542591672252">
+                <plugin id="Touch" />
+            </object-type>
+        </object-folder>
+        <object-folder name="BG">
+            <object-type name="Title" sid="850755111939289">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="907498726262389" speed="5">
+                        <frame duration="1" hotspotX="0.505319" hotspotY="0.490909" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\Pinball.png">
+                            <collision-poly>
+                                <point x="0.352964" y="0.312059" />
+                                <point x="0.50266" y="0.0494991" />
+                                <point x="0.683175" y="0.280371" />
+                                <point x="0.665564" y="0.479555" />
+                                <point x="0.890108" y="0.89603" />
+                                <point x="0.50266" y="0.923191" />
+                                <point x="0.102003" y="0.90961" />
+                                <point x="0.388186" y="0.479555" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Sprites">
+            <object-type name="Ballblocker" sid="4534975241268261">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="1274212652305761">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6129142817982478" speed="5">
+                        <frame duration="1" hotspotX="0.529412" hotspotY="0.5" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\PinballTemplate\Art_Pieces\Launcher.png">
+                            <collision-poly>
+                                <point x="0.119485" y="0.0174006" />
+                                <point x="0.882353" y="0.0166903" />
+                                <point x="0.889706" y="0.990057" />
+                                <point x="0.126838" y="0.989702" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BallStart" sid="3297638876869223">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6508628074042827" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Barrier" sid="8715877210240686">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="5388643500383989">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8273378432136859" speed="5">
+                        <frame duration="1" hotspotX="0.529412" hotspotY="0.5" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\PinballTemplate\Art_Pieces\Launcher.png">
+                            <collision-poly>
+                                <point x="0.119485" y="0.0174006" />
+                                <point x="0.882353" y="0.0166903" />
+                                <point x="0.889706" y="0.990057" />
+                                <point x="0.126838" y="0.989702" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Bonus" sid="4407891622917335">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="50012044781951" speed="10">
+                        <frame duration="1" hotspotX="0.513761" hotspotY="0.509615" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\Bump1B 500.png">
+                            <collision-poly>
+                                <point x="0.146789" y="0.153846" />
+                                <point x="0.495413" y="0" />
+                                <point x="0.853211" y="0.153846" />
+                                <point x="1" y="0.5" />
+                                <point x="0.853211" y="0.846154" />
+                                <point x="0.495413" y="1" />
+                                <point x="0.146789" y="0.846154" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.513761" hotspotY="0.509615" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\Bump1 500.png">
+                            <collision-poly>
+                                <point x="0.146789" y="0.153846" />
+                                <point x="0.495413" y="0" />
+                                <point x="0.853211" y="0.153846" />
+                                <point x="1" y="0.5" />
+                                <point x="0.853211" y="0.846154" />
+                                <point x="0.495413" y="1" />
+                                <point x="0.146789" y="0.846154" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Bumper" sid="556241730677278">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="3081392630864503">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="286776478702075" speed="6">
+                        <frame duration="1" hotspotX="0.504587" hotspotY="0.509615" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\Bump1B 100.png">
+                            <collision-poly>
+                                <point x="0.146789" y="0.153846" />
+                                <point x="0.495413" y="0" />
+                                <point x="0.853211" y="0.153846" />
+                                <point x="1" y="0.5" />
+                                <point x="0.853211" y="0.846154" />
+                                <point x="0.495413" y="1" />
+                                <point x="0.146789" y="0.846154" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.504587" hotspotY="0.509615" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\Bump1 100.png">
+                            <collision-poly>
+                                <point x="0.146789" y="0.153846" />
+                                <point x="0.495413" y="0" />
+                                <point x="0.853211" y="0.153846" />
+                                <point x="1" y="0.5" />
+                                <point x="0.853211" y="0.846154" />
+                                <point x="0.495413" y="1" />
+                                <point x="0.146789" y="0.846154" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Controframe_Left" sid="921217817445034">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7652269388636142" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Controframe_Right" sid="3763804001790356">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2263918606435367" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Curves" sid="6459591229754973">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="7824983064363654">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3848776493113497" speed="5">
+                        <frame duration="1" hotspotX="0.00207039" hotspotY="0.00124533" original-source="C:\Users\MG Games\Downloads\PinballTemplate\Art_Pieces\Border1.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="0.998968" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0.590062" y="0.997789" />
+                                <point x="0.664116" y="0.940784" />
+                                <point x="0.892339" y="0.860624" />
+                                <point x="0.957244" y="0.733371" />
+                                <point x="0.930729" y="0.225047" />
+                                <point x="0.92823" y="0.03269" />
+                                <point x="0.0857055" y="0.0240974" />
+                                <point x="0.0666686" y="0.231538" />
+                                <point x="0.0538109" y="0.783312" />
+                                <point x="0.12732" y="0.877958" />
+                                <point x="0.32168" y="0.93929" />
+                                <point x="0.400099" y="0.995642" />
+                                <point x="0.00207039" y="0.998755" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Fliperleft" sid="8799114710308324">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="3823107803637091">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8198850194010645" speed="5">
+                        <frame duration="1" hotspotX="1" hotspotY="0.505618" original-source="C:\Users\Lord\Documents\Game\Pinball PNG\flipperLeft.fw.png">
+                            <image-point name="Imagepoint 1" x="0.271084" y="0.505618" />
+                            <image-point name="Imagepoint 2" x="0.915663" y="0.674157" />
+                            <collision-poly>
+                                <point x="0.27259" y="0.244382" />
+                                <point x="0.5" y="0.325843" />
+                                <point x="0.746988" y="0.47191" />
+                                <point x="0.894578" y="0.60955" />
+                                <point x="0.901355" y="0.741573" />
+                                <point x="0.793675" y="0.766854" />
+                                <point x="0.290663" y="0.789326" />
+                                <point x="0.171687" y="0.66573" />
+                                <point x="0.141566" y="0.320225" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FlipperRight" sid="6267792342119671">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="5592802160960185">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2405313848617014" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.505618" original-source="C:\Users\Lord\Documents\Game\Pinball PNG\flipperRight.fw.png">
+                            <image-point name="Imagepoint 1" x="0.733333" y="0.505618" />
+                            <image-point name="Imagepoint 2" x="0.0909091" y="0.685393" />
+                            <collision-poly>
+                                <point x="0.254545" y="0.47191" />
+                                <point x="0.49697" y="0.314607" />
+                                <point x="0.775757" y="0.252809" />
+                                <point x="0.881818" y="0.348315" />
+                                <point x="0.8" y="0.752809" />
+                                <point x="0.49697" y="0.808989" />
+                                <point x="0.133333" y="0.752809" />
+                                <point x="0.0969697" y="0.623595" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GameOver" sid="3898470183605619">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2534069284319658" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\Game Over Temp 2.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="InvisWall" sid="407590828390599">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9228823258389787" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Pinball" sid="4154126974410416">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="87331385293488">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9659370046962853" speed="5">
+                        <frame duration="1" hotspotX="0.521739" hotspotY="0.510638" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\PinballTemplate\Art_Pieces\GameBall.png">
+                            <collision-poly>
+                                <point x="0.176017" y="0.175703" />
+                                <point x="0.484572" y="0.0212766" />
+                                <point x="0.823983" y="0.175703" />
+                                <point x="0.978261" y="0.484557" />
+                                <point x="0.823983" y="0.824297" />
+                                <point x="0.484572" y="0.978723" />
+                                <point x="0.176017" y="0.824297" />
+                                <point x="0.0217391" y="0.484557" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PlungerControl" sid="7952701123078742">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="384429457377247">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8483406922794084" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\FireButton.png">
+                            <collision-poly>
+                                <point x="0.183303" y="0.186941" />
+                                <point x="0.5" y="0.049195" />
+                                <point x="0.816697" y="0.186941" />
+                                <point x="0.956044" y="0.5" />
+                                <point x="0.829365" y="0.825581" />
+                                <point x="0.5" y="0.950805" />
+                                <point x="0.170635" y="0.825581" />
+                                <point x="0.043956" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="Clicked" pingpong="0" repeatcount="1" repeatto="0" sid="727063309724493" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\FireButton.png">
+                            <collision-poly>
+                                <point x="0.183303" y="0.186941" />
+                                <point x="0.5" y="0.049195" />
+                                <point x="0.816697" y="0.186941" />
+                                <point x="0.956044" y="0.5" />
+                                <point x="0.829365" y="0.825581" />
+                                <point x="0.5" y="0.950805" />
+                                <point x="0.170635" y="0.825581" />
+                                <point x="0.043956" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.183303" y="0.186941" />
+                                <point x="0.5" y="0.049195" />
+                                <point x="0.816697" y="0.186941" />
+                                <point x="0.956044" y="0.5" />
+                                <point x="0.829365" y="0.825581" />
+                                <point x="0.5" y="0.950805" />
+                                <point x="0.170635" y="0.825581" />
+                                <point x="0.043956" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="RollOver" sid="3838502434686619">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="1" repeatcount="1" repeatto="0" sid="4762390585225385" speed="10">
+                        <frame duration="1" hotspotX="0.504587" hotspotY="0.5" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\Bump1B.png">
+                            <collision-poly>
+                                <point x="0.146789" y="0.153846" />
+                                <point x="0.495413" y="0" />
+                                <point x="0.853211" y="0.153846" />
+                                <point x="1" y="0.5" />
+                                <point x="0.853211" y="0.846154" />
+                                <point x="0.495413" y="1" />
+                                <point x="0.146789" y="0.846154" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.504587" hotspotY="0.5" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\Bump1.png">
+                            <collision-poly>
+                                <point x="0.146789" y="0.153846" />
+                                <point x="0.495413" y="0" />
+                                <point x="0.853211" y="0.153846" />
+                                <point x="1" y="0.5" />
+                                <point x="0.853211" y="0.846154" />
+                                <point x="0.495413" y="1" />
+                                <point x="0.146789" y="0.846154" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="RollOver2" sid="7112066942754568">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="256827934382209" speed="10">
+                        <frame duration="1" hotspotX="0.503937" hotspotY="0.504762" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\PinballTemplate\Art_Pieces\Bump2.png">
+                            <collision-poly>
+                                <point x="0.133858" y="0.0428571" />
+                                <point x="0.496063" y="0.0380952" />
+                                <point x="0.885827" y="0.0476191" />
+                                <point x="1" y="0.314286" />
+                                <point x="0.594488" y="1" />
+                                <point x="0.496063" y="0.990476" />
+                                <point x="0.0314961" y="0.309524" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.503937" hotspotY="0.504762" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\PinballTemplate\Art_Pieces\Bump2B.png">
+                            <collision-poly>
+                                <point x="0.133858" y="0.0428571" />
+                                <point x="0.496063" y="0.0380952" />
+                                <point x="0.885827" y="0.0476191" />
+                                <point x="1" y="0.314286" />
+                                <point x="0.594488" y="1" />
+                                <point x="0.496063" y="0.990476" />
+                                <point x="0.0314961" y="0.309524" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Ship" sid="6891290590289249">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="3131628896481319">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1072055173764113" speed="6">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\PinballTemplate\Art_Pieces\Arrow1.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\PinballTemplate\Art_Pieces\Arrow2.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\PinballTemplate\Art_Pieces\Arrow3.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="cog" sid="4341150210849295">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3504283578928642" speed="5">
+                        <frame duration="1" hotspotX="0.485564" hotspotY="0.485" original-source="C:\Users\MG Games\Downloads\MG Games Dragon Print.png">
+                            <collision-poly>
+                                <point x="0.0918635" y="0.19" />
+                                <point x="0.480315" y="0.165" />
+                                <point x="0.818898" y="0.24" />
+                                <point x="0.994751" y="0.485" />
+                                <point x="0.703412" y="0.62" />
+                                <point x="0.480315" y="0.9725" />
+                                <point x="0.00262467" y="0.485" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Text">
+            <object-type name="BallsLeft" sid="441427871924429">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="Score" sid="3881128392432337">
+                <plugin id="Text" />
+            </object-type>
+        </object-folder>
+        <object-type name="txtMessage" sid="7297874456855114">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Flash" sid="5376590335523017">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="txtMessage2" sid="3591293463437964">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Flash" sid="6674752730477955">
+                    <behavior id="Flash" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="Black" sid="514337605012291">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="977979241100664" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Play" sid="358551270190427">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="276664852043738">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="791406343029625" speed="5">
+                    <frame duration="1" hotspotX="0.472868" hotspotY="0.509091" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\Play.png">
+                        <collision-poly>
+                            <point x="0.0387597" y="0.181818" />
+                            <point x="0.465116" y="0.363636" />
+                            <point x="0.945736" y="0.0727273" />
+                            <point x="0.906977" y="0.490909" />
+                            <point x="0.852713" y="0.709091" />
+                            <point x="0.465116" y="0.836364" />
+                            <point x="0.0155039" y="0.872727" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Howtoplay" sid="215803658201844">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="518083082755430" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\How to play.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LeftFlippers" sid="665985402087984">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="318222073287447" speed="5">
+                    <frame duration="1" hotspotX="0.501401" hotspotY="0.5" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\Left Flippers.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RightFlippers" sid="517718967365497">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="956655319748939" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\Right Flippers.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LedtArrow" sid="524628865511881">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="212028940492407" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\Left Arrow.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TopLeftScreen" sid="364772231287834">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="799063138751026" speed="5">
+                    <frame duration="1" hotspotX="0.500864" hotspotY="0.5" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\Top On Left Of Screen.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RightArrow" sid="359358638997511">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="939657561816973" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\Right Arrow.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TopRightScreen" sid="589404852371155">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="766694067008864" speed="5">
+                    <frame duration="1" hotspotX="0.50084" hotspotY="0.506024" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\Top On Right Of Screen.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PlayPinball" sid="632608840438832">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="380515753301239">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="572615114142289" speed="5">
+                    <frame duration="1" hotspotX="0.501484" hotspotY="0.5" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\Play Pinball.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="original" sid="849125290456409">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="5" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="171903138796053" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="GameOver2" sid="639914191092055">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="171693869532290">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="138262356265590" speed="5">
+                    <frame duration="1" hotspotX="0.50173" hotspotY="0.507042" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\Game Over.png">
+                        <collision-poly>
+                            <point x="0.0622837" y="0.253521" />
+                            <point x="0.49827" y="0.140845" />
+                            <point x="0.955017" y="0.183099" />
+                            <point x="0.913495" y="0.492958" />
+                            <point x="0.948097" y="0.788732" />
+                            <point x="0.49827" y="0.267606" />
+                            <point x="0.0553633" y="0.774648" />
+                            <point x="0.0346021" y="0.492958" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Score1" sid="594235009972200">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="535383622944251" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\Score.png">
+                        <collision-poly>
+                            <point x="0.11236" y="0.294118" />
+                            <point x="0.5" y="0.176471" />
+                            <point x="0.926966" y="0.191176" />
+                            <point x="0.898876" y="0.5" />
+                            <point x="0.910112" y="0.764706" />
+                            <point x="0.5" y="0.897059" />
+                            <point x="0.0842697" y="0.779412" />
+                            <point x="0.0898876" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="SpriteFont" sid="863274276057945">
+            <plugin id="Spritefont2" />
+            <texture original-source="C:\Users\MG Games\Documents\Games\PinBall\Asstes\Text 22.png" />
+        </object-type>
+        <object-type name="giphy" sid="123215454436841">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="12" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="749599434527633" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50078" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50078" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50078" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50078" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50078" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50078" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50078" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50078" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50078" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50078" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50078" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.50078" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="tumblr_o7twnaZztB1ua8lu8o1_" sid="676842935813424">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="10" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="932733348759732" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Title.xml</layout>
+        <layout>Instruction.xml</layout>
+        <layout>Main.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Titlesheet.xml</event-sheet>
+        <event-sheet>Instructionsheet.xml</event-sheet>
+        <event-sheet>Mainsheet.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="1" />
+        <global-instance type="Mouse" uid="2" />
+        <global-instance type="Audio" uid="3">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Touch" uid="4">
+            <properties>
+                <use-mouse-input>Yes</use-mouse-input>
+            </properties>
+        </global-instance>
+    </global-instances>
+    <sounds-folder>
+        <file name="tap.m4a" />
+        <file name="tap.ogg" />
+        <file name="Alarm03_01.ogg" />
+        <file name="aufheben_01.ogg" />
+        <file name="boing_wav_01.ogg" />
+        <file name="BUZZ_01.ogg" />
+        <file name="CASHREG_01.ogg" />
+        <file name="EE_Victory_01.ogg" />
+        <file name="Ring04_01.ogg" />
+    </sounds-folder>
+    <music-folder>
+        <file name="Space Cadet_01.ogg" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>
